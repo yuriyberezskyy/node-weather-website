@@ -67,6 +67,10 @@ app.get("/weather", (req, res) => {
         country: data.country,
         temperature: data.temperature,
         feelslike: data.feelslike,
+        country: data.country,
+        wind_speed: data.wind_speed,
+        humidity: data.humidity,
+        region: data.region,
       });
     });
   });

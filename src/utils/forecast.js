@@ -18,6 +18,9 @@ const forecast = (long, lat, callback) => {
         feelslike: response.body.current.feelslike,
         location: response.body.location.name,
         country: response.body.location.country,
+        wind_speed: response.body.current.wind_speed,
+        humidity: response.body.current.humidity,
+        region: response.body.location.region,
       });
     }
   });

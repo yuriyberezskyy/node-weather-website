@@ -4,6 +4,7 @@ const weatherForm = document.querySelector("form");
 const search = document.querySelector("input");
 const messageOne = document.querySelector("#message-1");
 const messageTwo = document.querySelector("#message-2");
+const messageThree = document.querySelector("#message-3");
 
 weatherForm.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -23,8 +24,16 @@ weatherForm.addEventListener("submit", (e) => {
           " Celsium degrees and feels like " +
           data.feelslike +
           " Celsium degrees";
-        messageOne.textContent = data.address;
+        const windAndHumidity =
+          "The wind speed is " +
+          data.wind_speed +
+          "km/h and the humidity is " +
+          data.humidity +
+          "%";
+        messageOne.textContent =
+          data.address + ", " + data.region + ", " + data.country;
         messageTwo.textContent = tempAndFeels;
+        messageThree.textContent = windAndHumidity;
       }
     });
   });
